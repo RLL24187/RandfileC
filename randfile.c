@@ -25,8 +25,21 @@ int rand()
       return 0;
   }
   close(randomData);
-  randomData = open("randResult.txt", O_CREAT, 0644); //opens and creates the file
+  int result;
+  result = open("randResult.txt", O_CREAT, 0644); //opens and creates the file
+  if (result < 0)
+  {
+      // ERROR
+      printf("Open # 2 errno %d error: %s\n", errno, strerror(errno));
+      return 0;
+  }
   int *buff = (int *)rnd;
-  write(randomData, buff, sizeof(int));
+  randomData = write(result, buff, sizeof(int));
+  if (randomData < 0)
+  {
+      // ERROR
+      printf("Write errno %d error: %s\n", errno, strerror(errno));
+      return 0;
+  }
   return *(int *)rnd;
 }
