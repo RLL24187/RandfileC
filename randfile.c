@@ -24,4 +24,9 @@ int rand()
       printf("Read errno %d error: %s\n", errno, strerror(errno));
       return 0;
   }
+  close(randomData);
+  randomData = open("randResult.txt", O_RDWR | O_CREAT); //opens and creates the file
+  int *buff = (int *)rnd;
+  write(randomData, buff, sizeof(int));
+  return *(int *)rnd;
 }
