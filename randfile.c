@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
 
 //A function that generates a random number by reading in the correct number of bytes from /dev/random.
 int rand()
