@@ -15,16 +15,13 @@ int rand()
       printf("Open errno %d error: %s\n", errno, strerror(errno));
       return 0;
   }
-  else
+  // int *rnd;
+  char rnd[100];
+  int test = read(randomData, rnd, sizeof(rnd));
+  if (test < 0)
   {
-    // int *rnd;
-    char rnd[100];
-    int test = read(randomData, rnd, sizeof(*rnd));
-    if (test < 0)
-    {
-        // returning -1 and sets errno if unsuccessful
-        printf("Read errno %d error: %s\n", errno, strerror(errno));
-        return 0;
-    }
+      // returning -1 and sets errno if unsuccessful
+      printf("Read errno %d error: %s\n", errno, strerror(errno));
+      return 0;
   }
 }
