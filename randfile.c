@@ -18,7 +18,7 @@ int rand()
   else
   {
     int *rnd;
-    int test = read(randomData, rnd, sizeof(rnd));
+    int test = read(randomData, rnd, sizeof(*rnd));
     if (test < 0)
     {
         // returning -1 and sets errno if unsuccessful
