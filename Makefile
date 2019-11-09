@@ -8,6 +8,6 @@ main.o: main.c randfile.h
 	gcc -c main.c
 
 clean:
-	rm -f *.o *.out randfile \ randResult.txt
+	rm -f *.o *.out randfile randResult.txt
 run:
 	./randfile.out
