@@ -26,7 +26,7 @@ int rand()
   }
   close(randomData);
   int result;
-  result = open("randResult.txt", O_CREAT, 0644); //opens and creates the file
+  result = open("randResult.txt", O_CREAT |O_RDWR, 0644); //opens and creates the file
   if (result < 0)
   {
       // ERROR
