@@ -17,7 +17,8 @@ int rand()
   }
   else
   {
-    int *rnd;
+    // int *rnd;
+    char rnd[100];
     int test = read(randomData, rnd, sizeof(*rnd));
     if (test < 0)
     {
