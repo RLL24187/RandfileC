@@ -12,7 +12,7 @@ int rand()
   if (randomData < 0)
   {
       // ERROR
-      printf("Open rand errno %d error: %s\n", errno, strerror(errno));
+      printf("Open in randfile.c errno %d error: %s\n", errno, strerror(errno));
       return 0;
   }
   // int *rnd;
@@ -21,7 +21,7 @@ int rand()
   if (test < 0)
   {
       // returning -1 and sets errno if unsuccessful
-      printf("Read rand errno %d error: %s\n", errno, strerror(errno));
+      printf("Read in randfile.c errno %d error: %s\n", errno, strerror(errno));
       return 0;
   }
   close(randomData);
