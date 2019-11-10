@@ -50,7 +50,7 @@ int main(){
     return 0;
   }
   close(result);
-  int result = open("randResult.txt", O_RD, 0664); //opens and creates the file
+  int result = open("randResult.txt", O_RDONLY, 0664); //opens and creates the file
   printbar();
   printf("Reading numbers from file...\n");
   int buff[11];
