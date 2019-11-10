@@ -25,6 +25,7 @@ int main(){
   printbar();
 
   int result = open("randResult.txt", O_CREAT | O_RDWR, 0664); //opens and creates the file
+  printf("result: %d\n", result);
   if (result < 0)
   {
     // ERROR in opening
@@ -34,13 +35,14 @@ int main(){
   int rnd[11];
   int i; //counter
   for(i = 0; i < 10; i++){
-    rnd[i] = rand() % 10;
+    rnd[i] = rand();
     printf("Random #%d: %d\n", i, rnd[i]);
   }
 
   printbar();
   printf("Writing numbers to file...\n");
   int fd = write(result, rnd, sizeof(rnd));
+  printf("fd: %d\n", fd);
   if (fd < 0)
   {
     // ERROR in writing
