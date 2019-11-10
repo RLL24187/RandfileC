@@ -35,7 +35,7 @@ int main(){
   int i; //counter
   for(i = 0; i < 10; i++){
     rnd[i] = rand();
-    printf("Random #%d: %d\n", i, buff[i]);
+    printf("Random #%d: %d\n", i, rnd[i]);
   }
 
   printbar();
