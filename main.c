@@ -66,6 +66,7 @@ int main(){
   for(i = 0; i < 10; i++){
     printf("Random #%d: %d\n", i, buff[i]);
   }
+  printf("result: %d\n", result);
   close(result);
   return 1;
 }
