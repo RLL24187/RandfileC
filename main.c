@@ -49,7 +49,8 @@ int main(){
     printf("Write in main.c errno %d error: %s\n", errno, strerror(errno));
     return 0;
   }
-
+  close(result);
+  int result = open("randResult.txt", O_RD, 0664); //opens and creates the file
   printbar();
   printf("Reading numbers from file...\n");
   int buff[11];
