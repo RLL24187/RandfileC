@@ -42,7 +42,7 @@ int main(){
   printbar();
   printf("Writing numbers to file...\n");
   int fd = write(result, rnd, sizeof(rnd));
-  printf("fd: %d\n", fd);
+  printf("fd: %d | sizeof(buff): %d\n", fd, sizeof(rnd));
   if (fd < 0)
   {
     // ERROR in writing
@@ -54,6 +54,7 @@ int main(){
   printf("Reading numbers from file...\n");
   int buff[11];
   fd = read(result, buff, sizeof(buff));
+  printf("fd: %d | sizeof(buff): %d\n", fd, sizeof(buff));
   if (fd < 0)
   {
     // ERROR in reading
