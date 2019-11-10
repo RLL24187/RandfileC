@@ -68,6 +68,6 @@ int main(){
     printf("Random #%d: %d\n", i, buff[i]);
   }
   printf("result: %d\n", result);
-  // close(result);
+  close(result);
   return 0;
 }
